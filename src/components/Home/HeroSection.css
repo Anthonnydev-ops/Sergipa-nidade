@@ -1,0 +1,35 @@
+/* HeroSection.css — Home page */
+.hero {
+  text-align: center;
+  padding: 56px 24px 40px;
+  background-color: #f4f1ea;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 12px;
+  font-family: 'EldesCordel', serif;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ── Responsivo Hero ── */
+@media (max-width: 768px) {
+  .hero-title { font-size: 1.8rem; }
+  .hero-subtitle { font-size: 0.9rem; }
+  .hero { padding: 40px 20px 24px; }
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: 1.5rem; margin-bottom: 8px; }
+  .hero-subtitle { font-size: 0.85rem; }
+  .hero { padding: 24px 16px 20px; }
+}

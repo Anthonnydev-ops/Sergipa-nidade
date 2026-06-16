@@ -1,0 +1,322 @@
+/* EstablishmentForm.css — Company page */
+
+/* Fonte personalizada */
+@font-face {
+  font-family: 'EldesCordel';
+  src: url('../../assets/eldes_cordel/EldesCordel-Demo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.form-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Wrapper da página — fundo bege padrão da plataforma */
+.form-page-wrapper {
+  background: #F5F5F0;
+  flex: 1;
+}
+
+/* Área de conteúdo — espelha .company-content */
+.form-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 36px 24px;
+}
+
+/* Cabeçalho com voltar + título */
+.form-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.form-back {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #4fb3bd;            /* cor primária do sistema */
+  font-weight: 600;
+  padding: 0;
+}
+
+.form-back:hover { text-decoration: underline; }
+
+.form-header h2 {
+  font-family: 'EldesCordel', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;            /* igual ao .company-title */
+  margin: 0;
+}
+
+.form-subtitle {
+  font-size: 0.85rem;        /* igual ao .company-subtitle */
+  color: #6b7280;            /* igual ao .company-subtitle */
+  margin: 0 0 20px;
+}
+
+/* Formulário */
+.establishment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Card container — espelha .company-section */
+.establishment-form-card {
+  background: #fff;
+  border: 1px solid #e5e7eb; /* igual ao .company-section */
+  border-radius: 14px;       /* igual ao .company-section */
+  padding: 24px;             /* igual ao .company-section */
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Linha de dois campos */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Label */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: #374151;            /* consistente com .est-row__stats e textos do dashboard */
+}
+
+/* Inputs e textarea — estilo unificado */
+.g-input,
+.establishment-form input[type="text"],
+.establishment-form input[type="tel"],
+.establishment-form textarea {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #e5e7eb;   /* igual ao .company-section e .est-row */
+  border-radius: 0.5rem;       /* igual ao .est-row (10px ≈ 0.5rem = 8px, próximo) */
+  background-color: #ffffff;   /* branco, igual aos cards do dashboard */
+  font-size: 0.83rem;
+  color: #111827;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.g-input:focus,
+.establishment-form input[type="text"]:focus,
+.establishment-form input[type="tel"]:focus,
+.establishment-form textarea:focus {
+  border-color: #489bb0;       /* cor ciano do sistema */
+  box-shadow: 0 0 0 3px rgba(72, 155, 176, 0.15);
+  background-color: #fff;
+}
+
+.g-input::placeholder,
+.establishment-form input::placeholder,
+.establishment-form textarea::placeholder {
+  color: #9ca3af;              /* igual ao .est-row__address */
+}
+
+.establishment-form textarea {
+  resize: vertical;
+  min-height: 96px;
+  line-height: 1.5;
+}
+
+/* Select — alinhado ao padrão do dashboard */
+.g-select {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #e5e7eb;   /* era transparent — corrigido para bater com .company-section */
+  border-radius: 0.5rem;
+  background-color: #ffffff;   /* era #f3f4f6 — corrigido para branco, igual aos inputs */
+  font-size: 0.83rem;
+  color: #111827;
+  outline: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b7280' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+}
+
+.g-select:focus {
+  border-color: #489bb0;       /* cor ciano do sistema */
+  box-shadow: 0 0 0 3px rgba(72, 155, 176, 0.15);
+  background-color: #fff;
+}
+
+/* Upload de imagem */
+.image-upload-area {
+  border: 2px dashed #d1d5db;
+  border-radius: 12px;
+  padding: 24px;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.25s, background-color 0.25s, box-shadow 0.25s;
+  background: #fafafa;
+  position: relative;
+}
+
+.image-upload-area:hover {
+  border-color: #4fb3bd;       /* cor primária — era #14b8a6, ajustado para #4fb3bd */
+  background: #f0fdfa;
+}
+
+.image-upload-area--drag {
+  border-color: #4fb3bd;
+  background: #e6f7f8;         /* era #ccfbf1, suavizado para combinar com o teal do sistema */
+  box-shadow: 0 0 0 3px rgba(79, 179, 189, 0.15);
+}
+
+.image-upload-area--error {
+  border-color: #ef4444;       /* igual ao .btn-delete */
+  background: #fef2f2;
+}
+
+.image-upload-input { display: none; }
+
+.image-upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 0;
+}
+
+.image-upload-icon {
+  opacity: 0.6;
+  margin-bottom: 4px;
+}
+
+.image-upload-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0;
+}
+
+.image-upload-hint {
+  font-size: 0.78rem;
+  color: #9ca3af;              /* igual ao .est-row__address */
+  margin: 0;
+}
+
+/* Preview da imagem */
+.image-preview-container {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.image-preview {
+  max-width: 100%;
+  max-height: 220px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+.image-remove-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+  line-height: 1;
+}
+
+.image-remove-btn:hover {
+  background: rgba(239, 68, 68, 0.9); /* igual ao .btn-delete hover */
+  transform: scale(1.1);
+}
+
+.image-upload-error {
+  font-size: 0.8rem;
+  color: #ef4444;
+  margin: 6px 0 0;
+  font-weight: 500;
+}
+
+/* Ações do formulário */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* Botão cancelar — borda e texto ciano */
+.form-actions .btn-secondary {
+  background: transparent;
+  border: 1px solid #489bb0;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #489bb0;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: auto; /* Sobrescreve o 100% global se necessário */
+}
+
+.form-actions .btn-secondary:hover { background: rgba(72, 155, 176, 0.05); }
+
+/* Botão salvar — fundo amarelo dourado */
+.form-actions .btn-primary {
+  background: #DCB069;
+  border: 1px solid #DCB069;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  width: auto; /* Sobrescreve o 100% global */
+}
+
+.form-actions .btn-primary:hover { opacity: 0.9; }
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .form-row { grid-template-columns: 1fr; }
+  .form-page { padding: 24px 16px; }
+  .establishment-form-card { padding: 16px; }
+}
+
+@media (max-width: 480px) {
+  .form-page { padding: 16px 12px; }
+  .form-header h2 { font-size: 1.2rem; }
+  .form-actions { flex-direction: column; align-items: stretch; }
+  .form-actions .btn-secondary,
+  .form-actions .btn-primary { width: 100%; }
+}

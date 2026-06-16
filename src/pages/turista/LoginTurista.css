@@ -1,0 +1,282 @@
+/* ─────────────────────────────────────────────
+   Google Fonts — mesmas da tela de Boas Vindas
+───────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ─────────────────────────────────────────────
+   Variáveis
+───────────────────────────────────────────── */
+:root {
+  --tur-blue:     #489bb0;
+  --tur-gold:     #DCB069;
+  --tur-text:     #374151;
+  --tur-muted:    #6b7280;
+  --tur-bg-input: #f3f4f6;
+}
+
+/* ─────────────────────────────────────────────
+   Página
+───────────────────────────────────────────── */
+.tur-page-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f9fafb;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ─────────────────────────────────────────────
+   Overlay
+───────────────────────────────────────────── */
+.tur-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  padding: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ─────────────────────────────────────────────
+   Modal
+───────────────────────────────────────────── */
+.tur-modal {
+  background: #fff;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 26rem;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.12);
+  max-height: 98vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.tur-modal::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─────────────────────────────────────────────
+   Botão fechar
+───────────────────────────────────────────── */
+.tur-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: var(--tur-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* ─────────────────────────────────────────────
+   Cabeçalho — Bebas Neue para título da marca
+───────────────────────────────────────────── */
+.tur-modal-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.tur-logo-img {
+  width: 75px;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.75rem;
+}
+
+.tur-logo-title {
+  font-family: 'EldesCordel', serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: var(--tur-blue);
+  margin: 0;
+  line-height: 1;
+  font-weight: normal;
+}
+
+
+.tur-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--tur-text);
+  margin: 0.4rem 0 0.2rem;
+}
+
+.tur-desc {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.82rem;
+  color: var(--tur-muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ─────────────────────────────────────────────
+   Abas
+───────────────────────────────────────────── */
+.tur-tabs {
+  display: flex;
+  background-color: #f3f4f6;
+  border-radius: 2rem;
+  padding: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.tur-tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--tur-text);
+  cursor: pointer;
+  border-radius: 2rem;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.tur-tab.active {
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+/* ─────────────────────────────────────────────
+   Formulário
+───────────────────────────────────────────── */
+.tur-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ─────────────────────────────────────────────
+   Caixa de teste
+───────────────────────────────────────────── */
+.tur-test-box {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.8rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.78rem;
+  color: #166534;
+}
+
+.tur-test-box p {
+  margin: 0.1rem 0;
+}
+
+.tur-test-tag {
+  font-weight: 600;
+}
+
+/* ─────────────────────────────────────────────
+   Botão primário — Poppins
+───────────────────────────────────────────── */
+.tur-btn-primary {
+  background-color: var(--tur-gold);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.tur-btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* ─────────────────────────────────────────────
+   Esqueceu a senha
+───────────────────────────────────────────── */
+.tur-forgot-link {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: var(--tur-blue);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+}
+
+.tur-forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* ─────────────────────────────────────────────
+   Checkbox de termos — Poppins
+───────────────────────────────────────────── */
+.tur-terms {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  color: #000;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.tur-terms input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--tur-blue);
+  cursor: pointer;
+}
+
+/* ─────────────────────────────────────────────
+   Mensagem de erro / sucesso
+───────────────────────────────────────────── */
+.tur-mensagem {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.4rem;
+  margin: 0;
+}
+
+.tur-mensagem--erro {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.tur-mensagem--sucesso {
+  background-color: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+/* ── Responsivo Login Turista ── */
+@media (max-width: 480px) {
+  .tur-modal {
+    padding: 1.25rem 1rem;
+    max-width: 95%;
+  }
+  .tur-logo-img {
+    height: 55px;
+  }
+  .tur-logo-title {
+    font-size: 32px;
+  }
+  .tur-subtitle {
+    font-size: 0.9rem;
+  }
+  .tur-desc {
+    font-size: 0.75rem;
+  }
+}

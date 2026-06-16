@@ -1,0 +1,85 @@
+/* Navbar.css — Home page */
+.navbar {
+  background-color: #4fb3bd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  height: 56px;
+  gap: 4px;
+  width: 100%;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 18px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14.5px;
+  font-weight: 600;
+  background: transparent;
+  color: #fff;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.nav-btn:hover:not(.nav-btn--active) {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.nav-btn--active {
+  background: #f5a822;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-btn--active:hover {
+  background: #f5b840;
+}
+
+.nav-btn:active {
+  transform: scale(0.93);
+  opacity: 0.88;
+}
+
+.nav-btn__icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ── Responsivo ── */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0 12px;
+    gap: 2px;
+  }
+  .navbar::-webkit-scrollbar {
+    display: none;
+  }
+  .nav-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+    gap: 4px;
+  }
+  .nav-btn__icon svg {
+    width: 14px;
+    height: 14px;
+  }
+}

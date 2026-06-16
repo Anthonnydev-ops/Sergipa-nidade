@@ -1,0 +1,204 @@
+/* Dashboard.css */
+
+.company-navbar {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0 32px;
+  height: 80px;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.company-navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: 'EldesCordel', serif;
+  font-size: 40px;
+  color: #000;
+  letter-spacing: 2px;
+}
+
+.company-navbar__logo img {
+  height: 75px;
+  width: auto;
+  display: block;
+}
+
+.company-navbar__btn-sair {
+  background-color: #111827;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+}
+
+.company-navbar__btn-sair:hover {
+  opacity: 0.85;
+}
+
+.company-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f4f1ea;
+}
+
+.company-content {
+  flex: 1;
+  width: 100%;
+  max-width: none;
+  padding: 36px 24px;
+}
+
+.company-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.company-logo-icon {
+   font-size: 1.8rem;
+   margin-right:0;
+  }
+
+.company-title {
+  font-family: 'EldesCordel', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.company-subtitle {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Stats */
+.company-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Section */
+.company-section {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.company-section__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.company-section__header h2 {
+  font-family: 'EldesCordel', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 2px;
+}
+
+.company-section__header p {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Est list */
+.est-list { display: flex; flex-direction: column; gap: 12px; }
+
+.est-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px 18px;
+  flex-wrap: wrap;
+}
+
+.est-row__info { flex: 1; min-width: 0; }
+.est-row__title-row { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.est-row__name { font-size: 0.95rem; font-weight: 700; color: #111827; }
+
+.est-row__category {
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.est-row__desc { font-size: 0.8rem; color: #6b7280; margin: 0 0 4px; }
+.est-row__address { font-size: 0.8rem; color: #9ca3af; margin: 0 0 8px; }
+
+.est-row__stats {
+  display: flex;
+  gap: 14px;
+  font-size: 0.8rem;
+  color: #374151;
+}
+
+.est-row__stats span { display: flex; align-items: center; gap: 4px; }
+.est-row__actions { display: flex; align-items: center; gap: 8px; }
+
+.btn-delete {
+  background: transparent;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  color: #ef4444;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.btn-delete:hover { background: #fee2e2; }
+
+@media (max-width: 768px) {
+  .company-stats { grid-template-columns: 1fr; }
+  .est-row { flex-direction: column; align-items: flex-start; }
+  .est-row__actions { width: 100%; justify-content: flex-start; }
+  .company-navbar { padding: 0 16px; height: 64px; }
+  .company-navbar__logo { font-size: 24px; gap: 8px; }
+  .company-navbar__logo img { height: 40px; }
+  .company-navbar__logo span { display: none; }
+  .company-content { padding: 24px 16px; }
+}
+
+@media (max-width: 480px) {
+  .company-navbar { padding: 0 12px; }
+  .company-navbar__btn-sair { font-size: 0.8rem; padding: 6px 12px; }
+  .company-content { padding: 16px 12px; }
+  .company-section { padding: 16px; }
+  .est-row { padding: 12px 14px; }
+  .company-section__header { flex-direction: column; align-items: stretch; }
+  .company-section__header button { width: 100%; }
+}
