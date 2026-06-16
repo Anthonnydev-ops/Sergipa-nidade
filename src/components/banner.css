@@ -1,0 +1,171 @@
+.banner-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.banner {
+    position: relative;
+    width: 95%;
+    max-width: 1200px;
+    background: #4fb3bd;
+    border-radius: 12px;
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.sticker {
+    position: absolute;
+    width: 240px;
+    height: auto;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.sticker-sol {
+    top: -60px;
+    left: -60px;
+}
+
+.sticker-chapeu {
+    bottom: -40px;
+    right: -40px;
+}
+
+.banner-left {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-left img {
+    width: 520px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: opacity 0.5s ease-in-out, transform 0.4s;
+}
+
+.banner-left img:hover {
+    transform: scale(1.03);
+}
+
+.tag {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: #f5a822;
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.divider {
+    width: 1px;
+    height: 260px;
+    background: #000000;
+}
+
+.banner-right {
+    flex: 1;
+}
+
+.banner-right h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.1;
+}
+
+.banner-right p {
+    margin-top: 18px;
+    font-size: 16px;
+    color: #003b2f;
+}
+
+.btn-banner {
+    margin-top: 25px;
+    background: #f5b840;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 999px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-banner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 320px;
+    text-align: center;
+    animation: scaleIn 0.3s ease;
+}
+
+.btn-login {
+    margin-top: 15px;
+    background: #0b3d2e;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-login:hover {
+    opacity: 0.9;
+}
+
+.btn-fechar {
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #555;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

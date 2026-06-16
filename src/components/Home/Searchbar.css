@@ -1,0 +1,24 @@
+/* SearchBar.css — Home page */
+.searchbar {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  align-items: center;
+}
+
+.searchbar .input {
+  flex: 1;
+}
+
+.searchbar .btn-primary {
+  width: auto;
+  white-space: nowrap;
+  padding: 0.875rem 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .searchbar {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+}

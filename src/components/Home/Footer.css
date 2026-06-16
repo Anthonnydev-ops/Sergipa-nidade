@@ -1,0 +1,42 @@
+/* Footer.css — Home page e Company page */
+.footer {
+  background-color: #4fb3bd;
+  color: #fff;
+  padding: 40px 24px 16px;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto 24px;
+}
+
+.footer-column h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.footer-column p {
+  font-size: 0.875rem;
+  margin: 0 0 6px;
+  opacity: 0.9;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  padding-top: 14px;
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

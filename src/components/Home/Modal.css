@@ -1,0 +1,121 @@
+/* EstablishmentModal.css — Home page */
+.est-modal {
+  background: #fff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18);
+}
+
+.est-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.est-modal__tabs {
+  display: flex;
+  gap: 4px;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+.tab-btn:hover:not(:disabled) { color: #111827; }
+.tab-btn--active { color: #4fb3bd; border-bottom-color: #4fb3bd; }
+.tab-btn:disabled { cursor: not-allowed; opacity: 0.4; }
+
+.est-modal__body { padding: 24px 24px 28px; }
+
+.est-modal__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.est-modal__title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+.est-modal__title-row h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+.est-modal__rating { font-size: 0.9rem; font-weight: 600; white-space: nowrap; }
+
+.est-modal__desc {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0 0 14px;
+  line-height: 1.6;
+}
+
+.est-modal__details {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.est-modal__details li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #555;
+}
+.detail-icon { color: #f97316; flex-shrink: 0; }
+
+.est-modal__actions { display: flex; gap: 10px; }
+.est-modal__actions .btn-primary,
+.est-modal__actions .btn-secondary { flex: 1; justify-content: center; }
+
+/* Avaliação */
+.avaliacao-form { display: flex; flex-direction: column; gap: 18px; }
+.avaliacao-form h2 { font-size: 1.1rem; font-weight: 700; color: #111827; margin: 0; }
+
+.estrelas { display: flex; gap: 6px; }
+.estrela {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #d1d5db;
+  transition: color 0.15s, transform 0.1s;
+  padding: 0;
+  line-height: 1;
+}
+.estrela--ativa { color: #f5a822; }
+.estrela:hover { transform: scale(1.1); }
+
+.avaliacao-actions { display: flex; gap: 10px; justify-content: flex-end; }
+
+.avaliacao-sucesso {
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-size: 1rem;
+  color: #111827;
+}

@@ -1,0 +1,29 @@
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.btn-idioma {
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  font-size: 1.35rem;
+  line-height: 1;
+  padding: 3px 5px;
+  cursor: pointer;
+  transition: border-color 0.15s, transform 0.15s, opacity 0.15s;
+  opacity: 0.55;
+}
+
+.btn-idioma:hover {
+  opacity: 1;
+  transform: scale(1.12);
+}
+
+.btn-idioma--ativo {
+  opacity: 1;
+  border-color: #4fb3bd;
+  background: #f0fbfc;
+}

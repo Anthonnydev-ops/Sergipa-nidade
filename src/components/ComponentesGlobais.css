@@ -1,0 +1,509 @@
+/* ================================ */
+
+
+/*           BOTÕES                 */
+
+
+/* ================================ */
+
+.btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    background-color: #111827;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: opacity 0.2s;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    opacity: 0.88;
+}
+
+.btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    border: 1px solid #111827;
+    outline: none;
+    cursor: pointer;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #111827;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.btn-secondary:hover {
+    background-color: #f3f4f6;
+}
+
+.btn-secondary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-icon {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Botão Ver mais do card */
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    border-radius: 8px;
+    background: transparent;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn-info {
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid orange;
+    color: orange;
+}
+
+.btn-info:hover {
+    background-color: #fff7ed;
+}
+
+.icon-info {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* Botão Mapa do card */
+
+.btn-map {
+    flex: 1;
+    justify-content: center;
+    padding: 8px 14px;
+    border: 1px solid #3b82f6;
+    color: #3b82f6;
+}
+
+.btn-map:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+
+/* Botão Avaliar do card */
+
+.btn-avaluate {
+    flex: 1;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    background: #cfa15d;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-avaluate:hover {
+    opacity: 0.88;
+}
+
+
+/* Botão Favorito */
+
+.favorite {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    border: none;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    transition: transform 0.15s;
+}
+
+.favorite:hover {
+    transform: scale(1.15);
+}
+
+.favorite.active {
+    color: #ef4444;
+}
+
+
+/* Botões Grade / Mapa (toggle de visualização) */
+
+.btn-grade,
+.btn-mapa {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid #d1d5db;
+    background: transparent;
+    color: #374151;
+    transition: 0.2s;
+}
+
+.btn-grade:hover,
+.btn-mapa:hover {
+    background: #f3f4f6;
+}
+
+.btn-grade--active,
+.btn-mapa--active {
+    background: #111827;
+    color: white;
+    border-color: #111827;
+}
+
+
+/* Botão Configurações */
+
+.btn-configs {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    color: #6b7280;
+    transition: color 0.2s;
+}
+
+.btn-configs:hover {
+    color: #111827;
+}
+
+.icon-configs {
+    width: 22px;
+    height: 22px;
+}
+
+
+/* ================================ */
+
+
+/*           INPUTS                 */
+
+
+/* ================================ */
+
+
+/* Input simples */
+
+.input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.input:focus {
+    border-color: #111827;
+}
+
+
+/* InputField com label e ícone */
+
+.g-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.g-label-icon-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.g-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--color-text, #111827);
+}
+
+.g-input-icon-label {
+    display: flex;
+    align-items: center;
+    color: #9ca3af;
+}
+
+.g-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.g-input {
+    width: 100%;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    background-color: var(--color-bg-input, #f3f4f6);
+    font-size: 0.83rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.g-input:focus {
+    border-color: var(--color-blue, #3b82f6);
+    background-color: #fff;
+}
+
+.g-input-right {
+    position: absolute;
+    right: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Textarea */
+
+.g-textarea {
+    width: 100%;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    background-color: var(--color-bg-input, #f3f4f6);
+    font-size: 0.83rem;
+    outline: none;
+    box-sizing: border-box;
+    resize: vertical;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.g-textarea:focus {
+    border-color: var(--color-blue, #3b82f6);
+    background-color: #fff;
+}
+
+
+/* ================================ */
+
+
+/*        OUTROS ELEMENTOS          */
+
+
+/* ================================ */
+
+
+/* Rating badge */
+
+.rating-badge {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+    white-space: nowrap;
+}
+
+
+/* Section title */
+
+.section-title {
+    margin-bottom: 1rem;
+}
+
+.section-title-top {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.section-icon {
+    display: flex;
+    align-items: center;
+    color: #f97316;
+}
+
+.section-title h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.section-title p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+
+/* Stat card (dashboard empresa) */
+
+.stat-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.stat-detail {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin: 0;
+}
+
+
+/* Empty state */
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #9ca3af;
+    font-size: 0.95rem;
+}
+
+
+/* Mensagem de erro */
+
+.error-message {
+    background: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+}
+
+.btn-olho {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #9ca3af;
+    padding: 0;
+}
+
+.btn-olho:hover {
+    color: #374151;
+}
+
+.mensagem {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.mensagem--sucesso {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.mensagem--erro {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.test-box {
+    background: #fef9c3;
+    border: 1px solid #fde047;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    color: #713f12;
+}
+
+.test-box p {
+    margin: 0;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    padding: 16px;
+}
+
+.modal-box {
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 32px 28px;
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.modal-close {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #9ca3af;
+}
+
+.modal-close:hover {
+    color: #111827;
+}
+
+@font-face {
+    font-family: 'EldesCordel';
+    src: url('../assets/eldes_cordel/EldesCordel-Demo.otf') format('opentype');
+    font-display: swap;
+}

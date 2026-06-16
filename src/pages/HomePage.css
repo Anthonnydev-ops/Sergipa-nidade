@@ -1,0 +1,233 @@
+@font-face {
+  font-family: 'EldesCordel';
+  src: url('../assets/eldes_cordel/EldesCordel-Demo.otf') format('opentype');
+  font-display: swap;
+}
+
+/* HomePage.css */
+.homepage {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #f4f1ea;
+}
+
+/* ── Header ── */
+.homepage__header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.homepage__header-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Logo */
+.homepage__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.homepage__logo-img {
+  height: 75px;
+  width: auto;
+  object-fit: contain;
+}
+.homepage__logo-text {
+  font-size: 40px;
+  font-weight: 800;
+  color: #000000;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  font-family: 'EldesCordel', serif;
+}
+
+/* Searchbar */
+.homepage__searchbar {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* ── Bandeiras de idioma ── */
+.homepage__idiomas {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.btn-idioma {
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  font-size: 1.35rem;
+  line-height: 1;
+  padding: 3px 5px;
+  cursor: pointer;
+  transition: border-color 0.15s, transform 0.15s, opacity 0.15s;
+  opacity: 0.55;
+}
+.btn-idioma:hover {
+  opacity: 1;
+  transform: scale(1.12);
+}
+.btn-idioma--ativo {
+  opacity: 1;
+  border-color: #4fb3bd;
+  background: #f0fbfc;
+}
+
+.btn-favoritos-topo {
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 6px;
+  border-radius: 50%;
+  transition: transform 0.15s;
+  flex-shrink: 0;
+}
+.btn-favoritos-topo:hover {
+  transform: scale(1.15);
+}
+.btn-favoritos-topo--active {
+  color: #ef4444;
+}
+
+/* Ações: login / usuário */
+.homepage__header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.homepage__usuario {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* ── Link recuperação de senha (dentro dos modais) ── */
+.link-recuperacao {
+  background: none;
+  border: none;
+  color: #489bb0;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  text-align: center;
+  transition: opacity 0.15s;
+  font-family: 'Poppins', sans-serif;
+}
+.link-recuperacao:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+.homepage__section-header {
+  padding: 28px 24px 4px;
+  background-color: #f4f1ea;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;        
+  align-items: center;  
+  justify-content: center; 
+  gap: 8px; 
+}
+
+.homepage__section-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 4px;
+  font-family: 'EldesCordel', serif;
+}
+.homepage__section-sub {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* ── Main ── */
+.homepage__main {
+  flex: 1;
+  background-color: #f4f1ea; 
+  padding-bottom: 16px;
+  position: relative;
+  overflow: visible;
+}
+
+.home-sticker {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.sticker-cacto {
+  bottom: 0;
+  left: -20px;
+}
+
+.sticker-lua {
+  bottom: 320px;
+  right: -20px;
+}
+
+.homepage__main-inner {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}  
+
+
+.homepage__favoritos-dica {
+  padding: 40px 24px;
+}
+
+/* ── Responsivo ── */
+@media (max-width: 768px) {
+  .homepage__header-inner {
+    flex-wrap: wrap;
+    padding: 8px 16px;
+  }
+  .homepage__logo-text {
+    display: none;
+  }
+  .homepage__searchbar {
+    order: 3;
+    width: 100%;
+    min-width: unset;
+  }
+  .homepage__idiomas {
+    order: 2;
+  }
+  .homepage__section-title {
+    font-size: 1.3rem;
+  }
+}
+
