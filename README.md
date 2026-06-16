@@ -1,4 +1,5 @@
 SERGIPANIDADE 🌴
+
 O Sergipanidade é uma plataforma digital dedicada a promover o turismo no estado de Sergipe. Nosso objetivo é facilitar a descoberta de experiências incríveis, oferecendo aos usuários uma interface intuitiva para explorar hotéis, restaurantes e pontos turísticos, além de permitir interações como avaliações e localização geográfica precisa.
 
 🚀 Sobre o Projeto
