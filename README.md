@@ -25,7 +25,7 @@ Siga os passos abaixo para configurar o projeto no seu ambiente local:
 Clone o repositório:
 
 Bash
-git clone https://github.com/seu-usuario/sergipanidade.git
+git clone https://github.com/Anthonnydev-ops/sergipanidade.git
 cd sergipanidade
 Instale as dependências:
 Utilize o comando abaixo para instalar todos os pacotes necessários:
